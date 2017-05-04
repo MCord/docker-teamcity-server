@@ -7,8 +7,6 @@ ENV TEAMCITY_DATA_PATH /data/teamcity
 # Enable Postgres ODBC driver.
 ADD https://jdbc.postgresql.org/download/postgresql-42.0.0.jar ${TEAMCITY_DATA_PATH}/lib/jdbc/postgresql-42.0.0.jar
 
-# Plugins
-ADD https://github.com/PeteGoo/tcSlackBuildNotifier/releases/download/v1.4.6/tcSlackNotificationsPlugin.zip /data/teamcity/plugins/tcSlackNotificationsPlugin.zip
-ADD https://github.com/JeanRev/TeamcityDockerCloudPlugin/releases/download/v0.3.4/docker-cloud_0.3.4.zip /data/teamcity/plugins/docker-cloud_0.3.4.zip
-
 VOLUME $TEAMCITY_DATA_PATH
+
+EXPOSE 8111
