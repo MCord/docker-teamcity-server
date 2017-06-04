@@ -1,4 +1,4 @@
-FROM jetbrains/teamcity-server
+FROM jetbrains/teamcity-server:2017.1.2
 
 # In order to modify teamcity configuration we need to relocated the data folder to a new path 
 # since the one specified in the parent container is already used in a volume and is immutable.
